@@ -1,0 +1,134 @@
+a{
+    text-decoration: none;
+}
+
+
+nav{
+    display: flex !important; 
+    justify-content: space-between;
+    width: 100%;
+    /* height: 100vh; */
+    background-color: #1E2D3B;
+}
+svg{
+    margin-left: 15px;
+    margin-top: 20px;
+}
+.left-section{
+    display: flex;
+    gap: 15px;
+    width: 20%;
+    height: 100px;
+    background-color: #EDCD1F;
+}
+
+.left-section > h1{
+    width: 50px;
+    display: flex;
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+.righ-section > ul{
+    display: flex;
+    gap: 50px;
+    margin-right: 150px;
+    margin-top: 30px;
+}
+
+li a{
+    color: white;
+}
+
+.active{
+    color: #EDCD1F;
+}
+/* headers_ს დასასრული */
+
+
+/* ბურგერის დასაწყისი */
+.burger{
+    width: 50px;
+    height: 50px;
+    display: none;
+}
+.burger > .line{
+    width: 40px;
+    height: 2px;
+    background-color: #1E2D3B;
+    margin-top: 13px;
+    margin-right: 20px;
+}
+.header2{
+    width: 100%;
+    height: 100vh;
+    background-color: #1E2D3B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20%;
+    display: none;
+    
+}
+#chek{
+    display: none;
+}
+#chek:checked ~ .header2{
+    display: block;
+}
+
+#chek:checked + label .burger .line-2{
+    
+    transform: rotate(-45deg) translate(10px);
+}
+#chek:checked + label .burger .line-1{
+    transform: rotate(45deg) translate(10px);
+}
+#chek:checked + label .burger .line-3{
+    visibility: hidden;
+}
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+    body{
+        overflow-x: hidden;
+    }
+    
+    nav{
+        visibility: hidden;
+        height: 50px;
+    }
+
+    .burger{
+        width: 100%;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: end;
+        position: absolute;
+        top: 0;
+        cursor: pointer;
+        background-color: #EDCD1F;
+    }
+
+    .header2 ul{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+       
+    }
+
+    
+
+    
+
+
+}
